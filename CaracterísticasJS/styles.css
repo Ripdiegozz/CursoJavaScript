@@ -1,0 +1,25 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    background-color: #023047;
+    box-sizing: border-box;
+}
+
+.Container-js{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding-top: 13rem;
+}
+
+.Container-js h1{
+    font-size: 90px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #ffb703;
+    padding: 24px;
+    border-radius: 16px;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    -ms-border-radius: 16px;
+    -o-border-radius: 16px;
+}
