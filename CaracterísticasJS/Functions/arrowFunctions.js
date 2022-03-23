@@ -30,33 +30,33 @@ function funcionTradicional2 (a, b){
   (a, b) => a + b + 100;
   
   // Función tradicional (sin argumentos)
-  let a = 4;
-  let b = 2;
+  let c = 4;
+  let d = 2;
   function funcionTradicional3(){
-    return a + b + 100;
+    return c + d + 100;
   }
   
   // Función flecha (sin argumentos)
-  let a = 4;
-  let b = 2;
-  () => a + b + 100;
+  let e = 4;
+  let f = 2;
+  () => e + f + 100;
 
 
 console.log(`// ARROW FUNCTIONS EN LOS OBJETOS`)
 
 // En un objeto, la funcion tradicional es igual al contexto donde se encuentra, es decir, el objeto.
 // Pero si usamos una arrow function el contexto no va a ser el objeto como en la funcion tradicional,
-// la arrow function nos va a dar un contexto del objeto "Window"
+// la arrow function nos va a dar un contexto del objeto "window"
 
 const gato = {
     nombre:"michu",
-    color = "gris",
-    edad = "tres años",
-    tomar = function (){ // funcion tradicional
+    color: "gris",
+    edad: "tres años",
+    tomar: function (){ // funcion tradicional => Esta nos va a devolver como contexto toda la funcion
         console.log("Tomando agua...")
         console.log(this)
     },
-    maullar = () => {   // arrow function
+    maullar:() => {   // arrow function => Esta nos va a devolver como contexto todo el objeto "window"
         console.log("Miau, Miau!!")
         console.log(this)
     }
