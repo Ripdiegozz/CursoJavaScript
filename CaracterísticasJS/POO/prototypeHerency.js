@@ -59,4 +59,4 @@ Snoopy.sonar();
 Snoopy.ladrar();
 Snoopy.saludar();
 
-// HERENCIA CON CLASES
+
