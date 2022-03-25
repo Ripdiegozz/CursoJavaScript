@@ -1,5 +1,6 @@
 
-console.log(`// HERENCIA EN CLASES`);
+// HERENCIA EN CLASES
+
 console.log(`\n`);
 console.log(`Clase Animal`)
 console.log(`\n`)
@@ -26,20 +27,6 @@ console.log(`Soy ${this.genero}`)
 }
 
 }
-
-const scooby = new Animal(`Scooby Doo`, `Macho`);
-
-const mimi = new Animal(`Mimi`, `Hembra`);
-
-scooby.saludar(), scooby.genre(), scooby.sonar();
-
-console.log(`\n`)
-
-mimi.saludar(), mimi.genre(), mimi.sonar();
-
-console.log(`\n`)
-
-
 
 // Para realizar la herencia de una clase a otra usamos la palabra reservada "extends"
 
@@ -86,3 +73,5 @@ console.log(`\n`)
 tango.saludar(), tango.genre(), tango.sonar(), tango.ladrar(), tango.size();
 
 console.log(`\n`)
+
+

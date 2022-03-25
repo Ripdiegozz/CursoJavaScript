@@ -50,5 +50,59 @@ console.log(`\n`)
 mimi.saludar(), mimi.genre(), mimi.sonar();
 
 
+// METODOS STATIC, GETTERS AND SETTERS
+
+// NOTA: LOS METODOS PRVIADOS EN JS NO EXISTEN
+// TODAS LAS CLASES SON PUBLICAS
+
+// METODOS ESTATICOS
+
+/*
+
+Un metodo estatico es aquel que se puede
+ejecutar sin la necesidad de instanciar 
+una clase.
+
+Ejemplo:
+
+*/
+
+class auto{ 
+
+constructor(marca, anio){ 
+
+this.marca = marca;
+this.anio = anio;
+
+}
+
+sonar(){
+console.log('Hago este sonido porque soy un auto.')
+}    
+
+/* 
+
+Al agregar la palabra reservada "static" no necesitamos crear un nuevo objeto auto
+para ejecutar el metodo de la clase auto
+
+*/
+
+static age(){ 
+console.log(`Mi año de fabricacion es ${this.anio}`)
+}
+
+genre(){
+console.log(`Soy de la marca ${this.marca}`)
+}
+
+}
+
+auto.age(); // Como podemos observar en la consola, el  metodo se ejecuta sin tener que crear
+            // un nuevo auto, unicamente llamando a la clase + metodo
+
+
+
+            
+
 
 
