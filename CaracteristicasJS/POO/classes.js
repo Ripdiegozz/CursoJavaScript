@@ -1,4 +1,3 @@
-
 // PARA CREAR CLASES EN JAVASCRIPT UTILIZAMOS LA PALABRA RESERVADA "class"
 
 // EJEMPLO CON EL PROTOTIPO ANIMAL DEL ARCHIVO PROTOTIPOS CONVIRTIENDOLO A CLASE
@@ -49,13 +48,15 @@ console.log(`\n`)
 
 mimi.saludar(), mimi.genre(), mimi.sonar();
 
+console.log(`\n`)
 
-// METODOS STATIC, GETTERS AND SETTERS
+
+console.log("*****************************/ :D /*****************************")
 
 // NOTA: LOS METODOS PRVIADOS EN JS NO EXISTEN
 // TODAS LAS CLASES SON PUBLICAS
 
-// METODOS ESTATICOS
+// METODO STATIC
 
 /*
 
@@ -67,18 +68,15 @@ Ejemplo:
 
 */
 
-class auto{ 
+class Auto{ 
 
-constructor(marca, anio){ 
+constructor(marca, anio, motor){ 
 
 this.marca = marca;
 this.anio = anio;
+this.motor = null; // Esta variable la declaramos para usar el metodo setter
 
 }
-
-sonar(){
-console.log('Hago este sonido porque soy un auto.')
-}    
 
 /* 
 
@@ -87,7 +85,12 @@ para ejecutar el metodo de la clase auto
 
 */
 
-static age(){ 
+
+static sonar(){
+console.log('Hago este sonido porque soy un auto.')
+}    
+
+age(){ 
 console.log(`Mi año de fabricacion es ${this.anio}`)
 }
 
@@ -95,14 +98,37 @@ genre(){
 console.log(`Soy de la marca ${this.marca}`)
 }
 
+
+// SETTERS Y GETTERS
+
+/* 
+
+Los setters y getters son metodos especiales    
+que nos permiten establecer y obtener valores   
+de atributos de nuestra clase
+
+*/
+            
+get getMotor(){ // El metodo get u obtenedor lo unico que va a hacer es obtener el valor del atributo de la clase
+    return this.motor;
 }
 
-auto.age(); // Como podemos observar en la consola, el  metodo se ejecuta sin tener que crear
+set setMotor(motor){ // El metodo set le agrega un valor al atributo
+    this.motor = motor;
+}
+}
+
+Auto.sonar(); // Como podemos observar en la consola, el  metodo se ejecuta sin tener que crear
             // un nuevo auto, unicamente llamando a la clase + metodo
 
+const tesla = new Auto ("Tesla", "2022");
+
+tesla.setMotor = "Electrico"; // La declaracion del valor de el metodo get se debe hacer fuera de la clase y se trabaja como si fuera una
+                              // propiedad
+
+console.log(tesla.getMotor);
 
 
-            
 
 
 
